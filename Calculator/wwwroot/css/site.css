@@ -1,0 +1,170 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
+body {
+    background: antiquewhite;
+}
+
+#header {
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#calc {
+    text-align: center;
+    width: 380px;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #abc6c2;
+    padding: 8px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #224662;
+}
+
+#display {
+    background: #bcbcbc;
+    padding: 8px;
+    margin: 16px 12px 10px 16px;
+    text-align: right;
+    font-family: 'Share Tech Mono', monospace;
+    border-radius: 8px;
+    width:335px;
+    resize:none;
+}
+
+.ErrorMessage {
+    background: #bcbcbc;
+    padding: 8px;
+    margin: 16px 12px 10px 16px;
+    text-align: right;
+    font-family: 'Share Tech Mono', monospace;
+    border-radius: 8px;
+    width: 335px;
+    resize: none;
+    color:red;
+}
+
+.Parameter {
+    width: 70px;
+    font-family: 'Share Tech Mono', monospace;
+    border-radius: 8px;
+    background: #bcbcbc;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+label {
+    color: aliceblue;    
+    font: bold;
+}
+
+#result p {
+    font-size: 1.8em;
+}
+
+#result,
+#previous {
+    text-align: right;
+}
+
+#keyboard {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.row {
+    margin-top: 4px;
+}
+
+.last-row {
+    float: left;
+    margin-top: -11.5%;
+}
+
+button {
+    width: 62px;
+    margin: 2px;
+}
+
+.invisible {
+    width: 0;
+}
+
+.btn-zero {
+    width: 134px;
+}
+
+.btn-result {
+    float: right;
+    margin-left: 4px;
+    height: 74px;
+}
+
+select {
+    background: #bcbcbc;
+    padding: 6px;
+    margin: 16px 12px 10px 16px;
+    text-align: right;
+    font-family: 'Share Tech Mono', monospace;
+    border-radius: 8px;
+    width: 200px;
+    resize: none;
+}
+
+

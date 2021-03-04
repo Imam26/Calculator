@@ -1,0 +1,45 @@
+﻿@model Calculator.Pages.Partial.DisplayModel
+@{
+}
+
+<input id="hiddenInput" type="hidden" value="@Model.Text" readonly>
+<textarea asp-for="Text" value="@Model.Text" id="display"></textarea>
+<div>
+    <label>X: </label>
+    <input class="Parameter" asp-for="XParam" />
+    <label>Y: </label>
+    <input class="Parameter" asp-for="YParam" />
+    <label>Z: </label>
+    <input class="Parameter" asp-for="ZParam" />
+</div>
+<div>
+    <label>Формулы: </label>
+    <select name="Formula.Id" id="FormulaList" asp-items="Model.ItemsFormula"></select>
+</div>
+
+<input class="ErrorMessage" asp-for="Message" readonly />
+
+
+<script>
+    var regex = /^\d*[.]?\d*$/;
+    
+    document.querySelectorAll(".Parameter").forEach(item => {
+        item.addEventListener("keypress", function (event) {
+            if (!regex.test(event.key)) {
+                event.returnValue = false;
+            }
+        });
+    }); 
+
+    document.getElementById("display").addEventListener("keypress", function (event) {
+        if (!regex.test(event.key)) {
+            event.returnValue = false;
+        }
+    });
+
+    document.getElementById("FormulaList").addEventListener("change", function (event) {
+        document.getElementById("display").value = this.options[this.selectedIndex].text;
+        document.getElementById("display").innerText = this.options[this.selectedIndex].text
+    });
+    
+</script>

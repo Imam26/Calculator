@@ -1,0 +1,75 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <div class="container">
+        <div id="header">
+            <h3>Welcome to Calculator App</h3>
+        </div>
+        <form id="tabForm" method="post" data-ajax="true" data-ajax-method="post" data-ajax-update="#updatePanel" data-ajax-mode="REPLACE" data-ajax-complete="completed" enctype="multipart/form-data">
+            <div id="calc" class="text-center">
+                <div id="updatePanel">
+                    <partial name="../Partial/Display" model="@(new Calculator.Pages.Partial.DisplayModel(Model.FormulaList))" />
+                </div>
+                <div id="keyboard">
+                    <div class="row">
+                        <button type="button" class="btn btn-info" value="7">7</button>
+                        <button type="button" class="btn btn-info" value="8">8</button>
+                        <button type="button" class="btn btn-info" value="9">9</button>
+                        <button type="button" class="btn btn-danger" value="ac">AC</button>
+                        <button type="button" class="btn btn-danger" value="ce">CE</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-info" value="4">4</button>
+                        <button type="button" class="btn btn-info" value="5">5</button>
+                        <button type="button" class="btn btn-info" value="6">6</button>
+                        <button type="button" class="btn btn-warning" value="/">/</button>
+                        <button type="button" class="btn btn-warning" value="*">*</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-info" value="1">1</button>
+                        <button type="button" class="btn btn-info" value="2">2</button>
+                        <button type="button" class="btn btn-info" value="3">3</button>
+                        <button type="button" class="btn btn-warning" value="+">+</button>
+                        <button type="button" class="btn btn-warning" value="-">-</button>
+
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-info" value="0">0</button>
+                        <button type="button" class="btn btn-warning" value="ru(">ru</button>
+                        <button type="button" class="btn btn-warning" value="rd(">rd</button>
+                        <button type="button" class="btn btn-warning" value=".">.</button>
+                        <button type="button" class="btn btn-warning" value="^">^</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-warning" value="sqrt(">sqrt</button>
+                        <button type="button" class="btn btn-warning" value="!">!</button>
+                        <button type="button" class="btn btn-warning" value="(">(</button>
+                        <button type="button" class="btn btn-warning" value=")">)</button>
+                        <button type="button" class="btn btn-warning" value="D">D</button>
+                    </div>                   
+                    <div class="row">
+                        <button type="button" class="btn btn-warning" value="x">x</button>
+                        <button type="button" class="btn btn-warning" value="y">y</button>
+                        <button type="button" class="btn btn-warning" value="z">z</button>
+                        <button type="submit" name="submit" class="btn btn-success" value="Save">save</button>
+                        <button type="submit" name="submit" class="btn btn-success" value="=">=</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        completed = function () {
+            console.log($("#hiddenInput").val())
+            $("#display").html($("#hiddenInput").val());            
+        }
+    </script>
+}
