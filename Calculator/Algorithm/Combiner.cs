@@ -45,7 +45,7 @@ namespace Calculator.Algorithm
                 case '-':
                     left.Value -= right.Value;
                     break;
-                case 'd':
+                case 'D':
                     left.Value = GetDiceResult(left.Value, right.Value);
                     break;
             }

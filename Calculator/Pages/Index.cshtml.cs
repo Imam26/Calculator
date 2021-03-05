@@ -84,6 +84,7 @@ namespace Calculator.Pages
                         {
                             Formula.Value = Text;
                             _iFormulaRepository.Update(Formula);
+
                             message = "Формула обновлена";
                         }
                                                    
